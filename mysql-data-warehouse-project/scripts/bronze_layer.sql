@@ -18,24 +18,24 @@ CREATE TABLE  IF NOT EXISTS crm_prd_info(
     prd_id INT,
     prd_key VARCHAR(50),
     prd_nm VARCHAR(255),
-    prd_cost DECIMAL(10,2),
+    prd_cost INT,
     prd_line VARCHAR(10),
-    prd_start_dt DATE,
-    prd_end_dt DATE
+    prd_start_dt DATETIME,
+    prd_end_dt DATETIME
 );
 
 -- sales table
 
-CREATE TABLE  IF NOT EXISTS  crm_sales_info(
+CREATE TABLE  IF NOT EXISTS  crm_sales_details(
     sls_ord_num VARCHAR(50),
     sls_prd_key VARCHAR(50),
     sls_cust_id INT,
     sls_order_dt INT,
     sls_ship_dt INT,
     sls_due_dt INT,
-    sls_sales DECIMAL(10,2),
+    sls_sales INT,
     sls_quantity INT,
-    sls_price DECIMAL(10,2)
+    sls_price INT
 );
 
 
@@ -44,14 +44,14 @@ CREATE TABLE  IF NOT EXISTS  crm_sales_info(
 
 
 CREATE TABLE  IF NOT EXISTS erp_cust_az12(
-    cid INT,
+    cid VARCHAR(50),
     bdate DATE,
     gen VARCHAR(10)
 );
 
 -- Customer Location
 CREATE TABLE  IF NOT EXISTS erp_loc_a101(
-    cid INT,
+    cid VARCHAR(50),
     cntry VARCHAR(50)
 );
 
